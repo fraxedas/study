@@ -52,4 +52,30 @@ describe('array', function () {
         });
     });
 
+    describe('rotated_search_index', function () {
+        it('should return 1 for [3, 5, 6, 7, 8, 9, 0, 1, 2] and 5', function () {
+
+            assert.equal(array.rotated_search_index([3, 5, 6, 7, 8, 9, 0, 1, 2], 5), 1);
+
+        });
+
+        it('should return 0 for [1] and 1', function () {
+
+            assert.equal(array.rotated_search_index([1], 1), 0);
+
+        });
+
+        it('should return -1 for [1] and 2', function () {
+
+            assert.equal(array.rotated_search_index([1], 2), -1);
+
+        });
+
+        it('should return 1 for [1,3] and 3', function () {
+
+            assert.equal(array.rotated_search_index([1,3], 3), 1);
+
+        });
+    });
+
 });
