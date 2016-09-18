@@ -35,19 +35,19 @@ describe('array', function () {
 
         it('should return 1 for [1,2]', function () {
 
-            assert.equal(array.rotated_search_min([1,2]), 1);
+            assert.equal(array.rotated_search_min([1, 2]), 1);
 
         });
 
         it('should return 1 for [2,1]', function () {
 
-            assert.equal(array.rotated_search_min([2,1]), 1);
+            assert.equal(array.rotated_search_min([2, 1]), 1);
 
         });
 
         it('should return 1 for [2,1]', function () {
 
-            assert.equal(array.rotated_search_min([4,5,6,1,2,3]), 1);
+            assert.equal(array.rotated_search_min([4, 5, 6, 1, 2, 3]), 1);
 
         });
     });
@@ -73,7 +73,33 @@ describe('array', function () {
 
         it('should return 1 for [1,3] and 3', function () {
 
-            assert.equal(array.rotated_search_index([1,3], 3), 1);
+            assert.equal(array.rotated_search_index([1, 3], 3), 1);
+
+        });
+    });
+
+    describe('uniquePaths', function () {
+        it('should return 1 for 1,1', function () {
+
+            assert.equal(array.uniquePaths(1,1), 1);
+
+        });
+
+        it('should return 1 for 1,100', function () {
+
+            assert.equal(array.uniquePaths(1,100), 1);
+
+        });
+
+        it('should return 1 for 100,1', function () {
+
+            assert.equal(array.uniquePaths(100,1), 1);
+
+        });
+
+        it('should return 2 for 2,2', function () {
+
+            assert.equal(array.uniquePaths(2,2), 2);
 
         });
     });
