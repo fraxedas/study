@@ -81,25 +81,53 @@ describe('array', function () {
     describe('uniquePaths', function () {
         it('should return 1 for 1,1', function () {
 
-            assert.equal(array.uniquePaths(1,1), 1);
+            assert.equal(array.uniquePaths(1, 1), 1);
 
         });
 
         it('should return 1 for 1,100', function () {
 
-            assert.equal(array.uniquePaths(1,100), 1);
+            assert.equal(array.uniquePaths(1, 100), 1);
 
         });
 
         it('should return 1 for 100,1', function () {
 
-            assert.equal(array.uniquePaths(100,1), 1);
+            assert.equal(array.uniquePaths(100, 1), 1);
 
         });
 
         it('should return 2 for 2,2', function () {
 
-            assert.equal(array.uniquePaths(2,2), 2);
+            assert.equal(array.uniquePaths(2, 2), 2);
+
+        });
+    });
+
+    describe('uniquePathsWithObstacles', function () {
+        it('should return 2', function () {
+
+            assert.equal(array.uniquePathsWithObstacles([
+                [0, 0, 0],
+                [0, 1, 0],
+                [0, 0, 0]
+            ]), 2);
+
+        });
+
+        it('should return 0', function () {
+
+            assert.equal(array.uniquePathsWithObstacles([
+                [0, 1, 0]
+            ]), 0);
+
+        });
+
+        it('should return 0', function () {
+
+            assert.equal(array.uniquePathsWithObstacles([
+                [1]
+            ]), 0);
 
         });
     });
