@@ -156,6 +156,12 @@ describe('array', function () {
             assert.equal(array.isSelfCrossing([1,1,2,1,1]), true);
 
         });
+
+         it('should return true for [1,2,1,1,2]', function () {
+
+            assert.equal(array.isSelfCrossing([1,2,1,1,2]), true);
+
+        });
     });
 
 });
