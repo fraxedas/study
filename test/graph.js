@@ -48,7 +48,7 @@ describe('graph', function () {
 
     describe('buildPath of [1, undefined, 0]', function () {
         // 1 -> 0 -> 2
-        var parent = [1, undefined, 0];
+        var parent = [1, 1, 0];
 
         it('should return [1,0,2] when seaching for 2', function () {
 

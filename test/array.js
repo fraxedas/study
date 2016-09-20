@@ -132,4 +132,30 @@ describe('array', function () {
         });
     });
 
+    describe('isSelfCrossing', function () {
+        it('should return true for [2, 1, 1, 2]', function () {
+
+            assert.equal(array.isSelfCrossing([2, 1, 1, 2]), true);
+
+        });
+
+        it('should return false for [1, 2, 3, 4]', function () {
+
+            assert.equal(array.isSelfCrossing([1, 2, 3, 4]), false);
+
+        });
+
+        it('should return true for [1, 1, 1, 1]', function () {
+
+            assert.equal(array.isSelfCrossing([1, 1, 1, 1]), true);
+
+        });
+
+        it('should return true for [1,1,2,1,1]', function () {
+
+            assert.equal(array.isSelfCrossing([1,1,2,1,1]), true);
+
+        });
+    });
+
 });
