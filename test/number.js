@@ -1,4 +1,3 @@
-
 var assert = require("assert");
 var number = require("../lib/number");
 
@@ -29,6 +28,28 @@ describe('number', function () {
             assert.equal(number.isUgly(0), false);
 
         });
+    });
+
+    describe('nthUglyNumber', function () {
+
+        it('should return 1 for 1', function () {
+
+            assert.equal(number.nthUglyNumber(1), 1);
+
+        });
+
+        it('should return 3 for 3', function () {
+
+            assert.equal(number.nthUglyNumber(3), 3);
+
+        });
+
+        it('should return 12 for 10', function () {
+
+            assert.equal(number.nthUglyNumber(10), 12);
+
+        });
+
     });
 
 });
